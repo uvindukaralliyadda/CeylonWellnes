@@ -1,0 +1,17 @@
+import React from 'react'
+import style from './page.module.css'
+import Hero from '@/components/Hero/Hero'
+import Herovideo from '@/components/Herovideo/Herovideo'
+import Comparison from '@/components/Home/Comparison/Comparison'
+import RegionGrid from '@/components/Home/RegionGrid/RegionGrid'
+
+export default function Home() {
+  return (
+    <div>
+      <Hero />
+      <Herovideo />
+      <Comparison/>
+      <RegionGrid/>
+    </div>
+  )
+}

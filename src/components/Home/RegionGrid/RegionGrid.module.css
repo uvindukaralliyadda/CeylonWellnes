@@ -1,0 +1,196 @@
+.section {
+  background: #ffffff;
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* TOP */
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.headingBox {
+  max-width: 700px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+  color: #30673A;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
+  color: #30673A;
+}
+
+.title span {
+  font-style: italic;
+  color: #66BB44;
+}
+
+/* LINK */
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #30673A;
+  transition: color 0.2s ease;
+}
+
+.viewAll:hover {
+  color: #66BB44;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.viewAll:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  transition: transform 0.8s ease;
+}
+
+.grid .card:nth-child(2):hover,
+.grid .card:nth-child(4):hover {
+  transform: translateY(-8.5px);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 400px;
+  text-decoration: none;
+  color: white;
+}
+
+.offset {
+  transform: translateY(32px);
+}
+
+@media (max-width: 1100px) {
+  .offset {
+    transform: none;
+  }
+}
+
+/* IMAGE */
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.7s ease;
+ 
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88),
+    rgba(0, 0, 0, 0.12),
+    transparent
+  );
+}
+
+/* CONTENT */
+.content {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.places {
+  color:#30673A ;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.regionName {
+  font-size: 16px;
+  margin: 0;
+}
+
+.description {
+  margin-top: 0.75rem;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* DISCOVER */
+.discover {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.discoverArrow {
+  transition: transform 0.2s ease;
+}
+
+.card:hover .discoverArrow {
+  transform: translate(2px, -2px);
+}

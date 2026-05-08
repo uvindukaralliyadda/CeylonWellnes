@@ -17,8 +17,11 @@ const baskerville = Libre_Baskerville({
 });
 
 export const metadata = {
-  title: "Premium Tech Solutions",
-  description: "High-end execution for modern agencies.",
+  title: "Ceylon Wellness Care",
+  description: "Sri Lanka's most trusted wellness directory, connecting you to the best wellness experiences across the island.",
+   icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

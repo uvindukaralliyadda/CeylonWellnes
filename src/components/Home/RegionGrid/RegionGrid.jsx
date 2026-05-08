@@ -28,7 +28,7 @@ export const regions = [
     slug: "east-coast",
     name: "East Coast",
     places: "Trincomalee · Arugam Bay",
-    img: "/Arugambay.webp",
+    img: "/arugambay.webp",
     desc: "Untouched shores, surf, and meditative solitude.",
   },
 ];

@@ -60,14 +60,14 @@ export default function Hero() {
             </p>
 
             <h1 className={styles.title}>
-              Travel That Heals,
+              Wellness Travel in Sri Lanka,
               <br />
-              <span><i>Not Just Impresses.</i></span>
+              <span><i>Designed Around You.</i></span>
             </h1>
 
             <p className={styles.subtitle}>
-              Move beyond sightseeing. Experience Sri Lanka through balance,
-              restoration, and mindful living.
+              We create fully personalized wellness journeys that go beyond sightseeing, helping you restore balance, heal, 
+              and experience Sri Lanka through mindful travel, curated by local experts.
             </p>
 
             <div className={styles.buttons}>

@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/Hero'
 import Herovideo from '@/components/Herovideo/Herovideo'
 import Comparison from '@/components/Home/Comparison/Comparison'
 import RegionGrid from '@/components/Home/RegionGrid/RegionGrid'
+import Testimonial from '@/components/Home/Testimonial/Testimonial'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Herovideo />
       <Comparison/>
       <RegionGrid/>
+      <Testimonial/>
     </div>
   )
 }

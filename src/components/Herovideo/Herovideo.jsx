@@ -38,9 +38,7 @@ const Herovideo = () => {
             </svg>
           </button>
 
-          <div className={styles.quote}>
-            <h1>"You don't return the same."</h1>
-          </div>
+          
         </div>
       </div>
     </section>

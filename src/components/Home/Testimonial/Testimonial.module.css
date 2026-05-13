@@ -1,0 +1,139 @@
+:root {
+  --bg-color: #ecf2f8;
+  --white: #ffffff;
+  --primary: #733fc8;
+  --primary-accent: #a775f1;
+  --secondary: #48556a;
+  --tertiary: #19202d;
+  --light-gray: #cfcfcf;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--bg-color);
+}
+
+/* Base card */
+.card {
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 45px auto;
+  grid-template-rows: 16px 16px auto 1fr;
+  grid-template-areas:
+    "img name"
+    "img title"
+    "mainQuote mainQuote"
+    "testimonial testimonial";
+}
+
+/* Text elements */
+.name {
+  grid-area: name;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.title {
+  grid-area: title;
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.mainQuote {
+  grid-area: mainQuote;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.testimonial {
+  grid-area: testimonial;
+  font-size: 0.8125rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* Image */
+.img {
+  grid-area: img;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.accentBorder {
+  border: 2px solid var(--primary-accent);
+}
+
+/* Card variations */
+.card1 {
+  background: #30673A;
+  color: #E9E9C7;
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+}
+
+.card2 {
+  background: var(--secondary);
+  color: var(--white);
+}
+.card3 {
+  background: #fff;
+}
+
+.card3 .mainQuote , .card5 .mainQuote {
+  color: #48556a;
+}
+
+.card5 {
+  background: var(--white);
+  color: var(--secondary);
+}
+
+ .card4 {
+  background: #30673A;
+  color: #E9E9C7;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-areas:
+      "card1 card4"
+      "card2 card3"
+      "card5 card5";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card1 { grid-area: card1; }
+  .card2 { grid-area: card2; }
+  .card3 { grid-area: card3; }
+  .card4 { grid-area: card4; }
+  .card5 { grid-area: card5; }
+}
+
+/* Desktop */
+@media (min-width: 1100px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+  }
+}

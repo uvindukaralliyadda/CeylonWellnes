@@ -3,7 +3,18 @@ import Image from "next/image";
 
 export default function Testimonial() {
   return (
+    <div className={styles.section}>
+
+    <div className={styles.headingBox}>
+            <p className={styles.eyebrow}>Real Experiences from Curated Wellness Journeys</p>
+
+            <h1 className={styles.title1}>
+              What Guests Feel <span>After Their Journey</span>
+            </h1>
+          </div>
+
     <div className={styles.container}>
+
       {/* Card 1 */}
       <div className={`${styles.card} ${styles.card1}`}>
         <Image
@@ -109,6 +120,7 @@ export default function Testimonial() {
           could simply focus on relaxing, healing, and enjoying every moment.
         </p>
       </div>
+    </div>
     </div>
   );
 }

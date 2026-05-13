@@ -45,6 +45,11 @@ const Footer = () => {
                   <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
                 </Link>
               </li>
+              <li>
+                <Link href="/">
+                  <Image src="/whatsapp.png" alt="Whatsapp" width={24} height={24} />
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -53,19 +58,21 @@ const Footer = () => {
             <div>
               <p className={styles.heading}>Treatments</p>
               <ul>
-                <li><Link href="/">Treatment 1</Link></li>
-                <li><Link href="/">Treatment 2</Link></li>
-                <li><Link href="/">Treatment 3</Link></li>
-                <li><Link href="/">Treatment 4</Link></li>
+                <li><Link href="/" className={styles.headingMax}>Treatment 1</Link></li>
+                <li><Link href="/" className={styles.headingMax}>Treatment 2</Link></li>
+                <li><Link href="/" className={styles.headingMax}>Treatment 3</Link></li>
+                <li><Link href="/" className={styles.headingMax}>Treatment 4</Link></li>
               </ul>
             </div>
 
-            <div>
+            <div >
               <p className={styles.heading}>Quick Links</p>
               <ul>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/">About</Link></li>
-                <li><Link href="/">Contact</Link></li>
+                <li><Link href="/" className={styles.headingMax}>Home</Link></li>
+                <li><Link href="/about" className={styles.headingMax}>About</Link></li>
+                <li><Link href="/treatment" className={styles.headingMax}>Treatments</Link></li>
+                <li><Link href="/region" className={styles.headingMax}>Region</Link></li>
+                <li><Link href="/contact" className={styles.headingMax}>Contact</Link></li>
               </ul>
             </div>
           </div>

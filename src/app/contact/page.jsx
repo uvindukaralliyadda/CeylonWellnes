@@ -225,6 +225,7 @@ const Contact = () => {
 
                     <button type="submit" className={styles.button}>
                       Send Inquiry
+                      <Image src="/submit.webp" alt="Send" width={20} height={20} />
                     </button>
                   </form>
                 </div>

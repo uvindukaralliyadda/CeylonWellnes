@@ -87,20 +87,35 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #30673A;
+  background: #66BB44;
   color: white;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 25px;
   text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: #30673A;
+  transform: translateY(-7px);
 }
 
 .secondaryBtn {
   padding: 12px 20px;
   border: 1px solid white;
   color: white;
-  border-radius: 8px;
+  border-radius: 25px;
   text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
+
+.secondaryBtn:hover {
+  background: linear-gradient(45deg,rgba(102, 187, 68, 0.75),rgba(48, 103, 58, 0.75));
+  transform: translateY(-7px);
+}
+
+
+
 
 /* INDICATORS */
 .indicators {

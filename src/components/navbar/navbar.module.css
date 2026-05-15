@@ -99,10 +99,12 @@
   color: #30673A;
 }
 
+/*
 .active {
   color: #30673A;
   font-weight: 500;
 }
+  */
 
 /* MOBILE */
 @media (max-width: 768px) {

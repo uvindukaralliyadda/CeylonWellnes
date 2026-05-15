@@ -53,7 +53,7 @@ const Navbar = () => {
             <li><Link href="/about" className={styles.link}>About</Link></li>
             <li><Link href="/treatment" className={styles.link}>Treatments</Link></li>
             <li><Link href="/region" className={styles.link}>Destinations</Link></li>
-           <li><button href="/contact" className={styles.libutton}>Contact</button></li>
+           <li><Link href="/contact" className={styles.libutton}>Contact</Link></li>
           </ul>
         </div>
 

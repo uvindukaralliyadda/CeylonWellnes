@@ -1,0 +1,402 @@
+.container {
+background-color: #E9E9C7;
+padding-top: 20px;
+padding-bottom: 020px;
+margin-bottom: 0;
+}
+/*page header*/
+.highlight {
+  background-color: transparent;
+  color: #66BB44;
+}
+
+/*timeline*/
+
+.containerText {
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 3rem);
+  margin-bottom: 30px;
+  color: #66BB44;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  list-style: none;
+  padding: 0 ;
+  margin: 40px ;
+  background-color: #E9E9C7;
+}
+
+/* center line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #d1d5db;
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* alternating layout */
+.left {
+  text-align: right;
+  flex-direction: row-reverse;
+  margin-right: 1rem;
+}
+
+.right {
+  grid-column: 2;
+  margin-left: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #30673A;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+}
+
+.textBox {
+  margin-top: -0.25rem;
+  display: block;
+  gap:40px;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.time {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #30673A;
+  margin: 0.4rem 0 20px;
+}
+
+.text {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #66BB44;
+  margin-bottom: 15px;
+}
+
+.mileImg {
+border-radius: 25px;
+align-items: end;
+transition: transform 0.3s ease;
+margin-bottom: 20px;
+ 
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.mileImg:hover {
+transform: scale(1.05);
+}
+
+/* contact inquiry section */
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    grid-column: 1 !important;
+    margin-left: 2rem;
+    margin-right: 0;
+    text-align: left;
+    flex-direction: row;
+  }
+
+  .left {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/*contact section */
+
+.contactSection {
+    background-color: #ffffff;
+    display:flex;
+    align-items: start;
+    gap: 40px;
+    justify-content: space-evenly;
+    padding: 40px 40px 20px ;
+    
+  }    
+
+.contactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}    
+
+.contactCard2
+{
+   display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: max-content;
+}    
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 12px;
+  color: #30673A;
+}
+  .containerText1 {
+  text-align: left;
+  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #30673A;
+}
+
+
+.textLabel{
+  display: flex;
+    align-items: flex-start;
+    background-color: #E5E7D6;
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+    box-sizing: border-box;
+}
+
+.textIcon {
+  background-color: #f3f3f3;
+  padding: 10px 10px 5px 10px;
+  border-radius: 50%;
+}
+
+.textArea{
+  display: inline-block;
+  color: #30673A;
+  
+}
+
+.textArea h2 {
+  font-size: 15px;
+  font-weight: 200;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.textArea p {
+  font-size: 15px;
+  font-weight: 400;
+   margin-left: 15px;
+  text-align: left;
+}
+
+/* contact form*/
+
+.contactForm {
+  flex: 1;
+  background-color: #f3f3f3;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contactForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.formTitle {
+  font-size: 28px;
+  font-weight: 300;
+  color: #30673A;
+  margin-bottom: 10px;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* field stays same */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+
+/* Labels */
+.field label {
+  font-size: 14px;
+  font-weight: 300;
+  color: #30673A;
+}
+
+/* Inputs */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 0.5px solid #30673A;
+  color: #30673A;
+  background-color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #30673A;
+  opacity: 0.6; /* important for consistent color */
+}
+
+/* Focus effect */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border: 1px solid #1abc9c; /* change active color here */
+  outline: none;
+}
+
+/* Textarea */
+.field textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* Button */
+.button {
+  margin-top: 10px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #30673A;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #244f2c;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  /* 전체 section becomes vertical */
+  .contactSection {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  /* Left card full width */
+  .contactCard {
+    width: 100%;
+  }
+
+  .contactCard2 {
+    width: 100%;
+    gap: 18px;
+  }
+
+  /* Each contact item tighter spacing */
+  .textLabel {
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .textArea h2,
+  .textArea p {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  /* FORM becomes full width */
+  .contactForm {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  /* Rows become single column */
+  .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Inputs slightly smaller padding for mobile */
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  /* Button becomes full width for mobile UX */
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}

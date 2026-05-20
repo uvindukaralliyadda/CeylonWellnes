@@ -78,12 +78,6 @@ margin-bottom: 0;
   margin-top: 0.4rem;
 }
 
-.textBox {
-  margin-top: -0.25rem;
-  display: block;
-  gap:40px;
-  animation: floatY 4s ease-in-out infinite;
-}
 
 .time {
   font-size: 0.75rem;
@@ -113,6 +107,15 @@ transition: transform 0.3s ease;
 margin-bottom: 20px;
  
 }
+
+/*animation*/
+.textBox {
+  margin-top: -0.25rem;
+  display: block;
+  gap:40px;
+  animation: floatY 4s ease-in-out infinite;
+}
+
 
 @keyframes floatY {
   0% { transform: translateY(0); }

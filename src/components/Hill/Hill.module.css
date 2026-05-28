@@ -1,0 +1,103 @@
+/* ================= GALLERY WRAPPER ================= */
+
+.city1gallery {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+
+  border-radius: 25px;
+  overflow: hidden; /* ⭐ KEY FIX */
+
+  background: #f2f2f2;
+}
+
+/* ================= CAROUSEL ================= */
+
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 25px;
+}
+
+/* ================= SLIDE ================= */
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: 25px;
+}
+
+/* ================= NEXT IMAGE ================= */
+
+.image {
+  object-fit: cover; /* better for gallery */
+  border-radius: 25px; /* optional (not required due to overflow hidden) */
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* LEFT BUTTON */
+.prev {
+  left: 15px;
+}
+
+/* RIGHT BUTTON */
+.next {
+  right: 15px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .city1gallery {
+    height: 250px;
+    border-radius: 18px;
+  }
+
+  .carousel,
+  .slide {
+    border-radius: 18px;
+  }
+
+  .btn {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+}

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import PageHeader from "@/components/PageHeader/PageHeader";
 import Field from '@/components/Field/Field';
 import ContactForm from '@/components/ContactForm/ContactForm';
+import Compareabout from '@/components/Compareabout/Compareabout';
 
 const page = () => {
   return (
@@ -97,9 +98,11 @@ const page = () => {
 
             </div>
 
-</div>
-        </section>
+      </div>
 
+      
+        </section>
+        <Compareabout />
         
       
     </div>

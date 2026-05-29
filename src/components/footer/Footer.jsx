@@ -71,7 +71,7 @@ const Footer = () => {
                 <li><Link href="/" className={styles.headingMax}>Home</Link></li>
                 <li><Link href="/about" className={styles.headingMax}>About</Link></li>
                 <li><Link href="/treatment" className={styles.headingMax}>Treatments</Link></li>
-                <li><Link href="/region" className={styles.headingMax}>Region</Link></li>
+                <li><Link href="/region" className={styles.headingMax}>Destinations</Link></li>
                 <li><Link href="/contact" className={styles.headingMax}>Contact</Link></li>
               </ul>
             </div>

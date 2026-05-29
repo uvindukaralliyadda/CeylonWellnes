@@ -2,11 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,27 +18,32 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        
-        {/* Logo */}
+
+        {/* LOGO */}
         <Link href="/" className={styles.logo}>
-          <img
+          <Image
             src="/logo.png"
             alt="Logo"
+            width={160}
+            height={55}
             className={styles.logoImage}
+            priority
           />
         </Link>
 
-        {/* Mobile Button */}
+        {/* MOBILE MENU BUTTON */}
         <button
           className={styles.menuButton}
           onClick={() => setOpen(!open)}
           aria-label="Toggle Menu"
+          aria-expanded={open}
         >
           <svg className={styles.icon} viewBox="0 0 24 24" fill="none">
             <path
@@ -46,14 +55,60 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Menu */}
+        {/* MENU */}
         <div className={`${styles.menu} ${open ? styles.show : ""}`}>
           <ul className={styles.list}>
-            <li><Link href="/" className={styles.active}>Home</Link></li>
-            <li><Link href="/about" className={styles.link}>About</Link></li>
-            <li><Link href="/treatment" className={styles.link}>Treatments</Link></li>
-            <li><Link href="/region" className={styles.link}>Destinations</Link></li>
-           <li><Link href="/contact" className={styles.libutton}>Contact</Link></li>
+
+            <li>
+              <Link
+                href="/"
+                className={pathname === "/" ? styles.active : styles.link}
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/about"
+                className={pathname === "/about" ? styles.active : styles.link}
+                onClick={() => setOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/treatment"
+                className={pathname === "/treatment" ? styles.active : styles.link}
+                onClick={() => setOpen(false)}
+              >
+                Treatments
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/region"
+                className={pathname === "/region" ? styles.active : styles.link}
+                onClick={() => setOpen(false)}
+              >
+                Destinations
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact"
+                className={styles.contactButton}
+                onClick={() => setOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
+
           </ul>
         </div>
 

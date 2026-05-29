@@ -213,7 +213,12 @@ const Contact = () => {
 
                           {/* Row 3 full width */}
                           <div className={styles.field}>
-                            <label>TRAVEL DATES</label>
+                            <label>FROM</label>
+                            <input type="date" placeholder='Approximate is enough..' />
+                          </div>
+
+                          <div className={styles.field}>
+                            <label>TO</label>
                             <input type="date" placeholder='Approximate is enough..' />
                           </div>
 

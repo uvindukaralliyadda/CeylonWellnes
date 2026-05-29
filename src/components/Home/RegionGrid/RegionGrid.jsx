@@ -57,7 +57,7 @@ const RegionGrid = () => {
         {/* Grid */}
         <div className={styles.grid}>
           {regions.map((region, index) => (
-            <Link
+            <div
               key={region.slug}
               href={`/regions/${region.slug}`}
               className={`${styles.card} ${
@@ -89,7 +89,7 @@ const RegionGrid = () => {
 
               </div>
 
-            </Link>
+            </div>
           ))}
         </div>
       </div>

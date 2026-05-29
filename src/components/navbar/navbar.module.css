@@ -1,9 +1,10 @@
-/* NAVBAR BASE */
+/* ================= NAVBAR ================= */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 999;
 
   background: transparent;
   border-bottom: 1px solid transparent;
@@ -11,26 +12,28 @@
   transition: all 0.3s ease;
 }
 
-/* ON SCROLL */
+/* ================= SCROLLED STATE ================= */
+
 .scrolled {
-  background: rgba(229, 231, 235, 0.95);
-  border-bottom: 1px solid #e5e7eb;
+  background: rgba(229, 231, 235, 0.92);
+  border-bottom: 1px solid #d1d5db;
   backdrop-filter: blur(10px);
 }
 
-/* CONTAINER */
+/* ================= CONTAINER ================= */
+
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 16px 32px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
+
 .logo {
   display: flex;
   align-items: center;
@@ -38,95 +41,148 @@
 }
 
 .logoImage {
-  height: 50px;
+  height: 55px;
+  width: auto;
+  object-fit: contain;
 }
 
-/* MOBILE BUTTON */
-.menuButton {
-  width: 40px;
-  height: 40px;
-  display: none;
+/* ================= MENU ================= */
 
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  color: #333;
-}
-
-/* MENU */
 .menu {
   display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
+
+/* ================= NAV LINKS ================= */
 
 .list {
   display: flex;
+  align-items: center;
   gap: 32px;
+
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.libutton {
-  background: #66BB44;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: #e5e7eb;
-  font-size: 16px;
-}
-
-
-
-/* LINKS */
 .link {
   text-decoration: none;
   color: #66BB44;
-  padding: 8px 0;
-  transition: 0.2s;
+  font-size: 16px;
+  font-weight: 400;
+
+  transition: 0.25s ease;
 }
 
 .link:hover {
   color: #30673A;
 }
 
-/*
-.active {
-  color: #30673A;
-  font-weight: 500;
-}
-  */
+/* ================= ACTIVE LINK ================= */
 
-/* MOBILE */
+.active {
+  text-decoration: none;
+  color: #30673A;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ================= CONTACT BUTTON ================= */
+
+.contactButton {
+  text-decoration: none;
+
+  background: #66BB44;
+  color: white;
+
+  padding: 10px 18px;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #30673A;
+}
+
+/* ================= MOBILE BUTTON ================= */
+
+.menuButton {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  color: #30673A;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
 @media (max-width: 768px) {
+
+  .container {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+  }
+
+  /* SHOW MOBILE BUTTON */
   .menuButton {
     display: flex;
   }
 
+  /* HIDE MENU */
   .menu {
     width: 100%;
     display: none;
-    margin-top: 12px;
+
+    margin-top: 16px;
   }
 
+  /* SHOW WHEN OPEN */
   .show {
     display: block;
   }
 
+  /* MOBILE MENU BOX */
   .list {
     flex-direction: column;
-    gap: 12px;
-    padding: 12px;
-    background: #f3f4f6;
-    border-radius: 8px;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    background: rgba(255,255,255,0.96);
+
+    padding: 20px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .link,
+  .active {
+    font-size: 16px;
+  }
+
+  .contactButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logoImage {
+    height: 48px;
   }
 }

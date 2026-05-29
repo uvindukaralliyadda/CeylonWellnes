@@ -37,6 +37,7 @@ export default function Hill() {
             fill
             className={styles.image}
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>

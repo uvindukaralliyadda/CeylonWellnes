@@ -6,6 +6,7 @@ import South from '@/components/South/South'
 import Hill from '@/components/Hill/Hill'
 import Cultural from '@/components/Cultural/Cultural'
 import East from '@/components/East/East'
+import Cta from '@/components/Cta/Cta'
 
 const page = () => {
   return (
@@ -204,7 +205,7 @@ const page = () => {
           <East />
          </div>
         </section>
-
+        <Cta />
     </div>
   )
 }

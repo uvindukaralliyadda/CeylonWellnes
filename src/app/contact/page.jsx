@@ -5,6 +5,7 @@ import Image from 'next/image'
 import PageHeader from "@/components/PageHeader/PageHeader";
 import Field from '@/components/Field/Field';
 import ContactForm from '@/components/ContactForm/ContactForm'; 
+import Cta from '@/components/Cta/Cta';
 
 const Contact = () => {
  
@@ -234,8 +235,9 @@ const Contact = () => {
                     </button>
                   </form>
                 </div>
+                
         </div>  
-
+      <Cta/>
     </div>
   )
 }

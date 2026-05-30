@@ -6,6 +6,7 @@ import PageHeader from "@/components/PageHeader/PageHeader";
 import Field from '@/components/Field/Field';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Compareabout from '@/components/Compareabout/Compareabout';
+import Cta from '@/components/Cta/Cta';
 
 const page = () => {
   return (
@@ -99,12 +100,58 @@ const page = () => {
             </div>
 
       </div>
-
-      
-        </section>
+      </section>
+        
         <Compareabout />
         
-      
+    <section className={styles.purpose}>
+      <h1>Our Purpose</h1>
+
+      <div className={styles.purposetypes}>
+
+        {/* Mission Card */}
+        <div className={styles.card}>
+          <Image
+            src="/Mission.webp"
+            alt="Mission"
+            width={425}
+            height={325}
+            className={styles.image}
+          />
+
+          <div className={styles.overlay}>
+            <p>Mission</p>
+            <h1>
+              <i>
+              To make wellness travel in Sri Lanka simple, personalised, and stress-free.
+              </i>
+            </h1>
+          </div>
+        </div>
+
+        {/* Vision Card */}
+        <div className={styles.card}>
+          <Image
+            src="/Vision.webp"
+            alt="Vision"
+            width={425}
+            height={325}
+            className={styles.image}
+          />
+
+          <div className={styles.overlay}>
+            <p>Vision</p>
+            <h1><i>
+              To become a trusted wellness partner for global travellers seeking calm,
+              recovery, and balance in Sri Lanka.
+              </i>
+            </h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+      <Cta />
     </div>
   )
 }

@@ -75,7 +75,7 @@ export default function Hero() {
                 Start Your Wellness Journey
               </Link>
 
-              <Link href="/treatments" className={styles.secondaryBtn}>
+              <Link href="/treatment" className={styles.secondaryBtn}>
                 Explore Programs
               </Link>
             </div>

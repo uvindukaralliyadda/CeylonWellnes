@@ -155,7 +155,7 @@ const Contact = () => {
                     </div>
                     <div className={styles.textArea}>
                         <h2>PHONE</h2>
-                        <p>+94 11 123 4567</p>
+                        <p>+94 74 135 1434</p>
                     </div>
                 </div>
 
@@ -165,7 +165,7 @@ const Contact = () => {
                     </div>
                     <div className={styles.textArea}>
                         <h2>WHATSAPP</h2>
-                        <p>+94 77 123 4567</p>
+                        <p>+94 74 135 1434</p>
                     </div>
                 </div>
 

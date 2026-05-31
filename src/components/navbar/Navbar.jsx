@@ -79,15 +79,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li>
-              <Link
-                href="/treatment"
-                className={pathname === "/treatment" ? styles.active : styles.link}
-                onClick={() => setOpen(false)}
-              >
-                Treatments
-              </Link>
-            </li>
+            
 
             <li>
               <Link
@@ -96,6 +88,16 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
               >
                 Destinations
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/treatment"
+                className={pathname === "/treatment" ? styles.active : styles.link}
+                onClick={() => setOpen(false)}
+              >
+                Wellness Journeys
               </Link>
             </li>
 

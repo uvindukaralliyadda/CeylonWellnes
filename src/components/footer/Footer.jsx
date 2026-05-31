@@ -36,10 +36,14 @@ const Footer = () => {
 
             <ul className={styles.social}>
               <li>
-                <Link href="/">
-                  <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
-                </Link>
-              </li>
+                  <a
+                    href="https://www.facebook.com/share/18g4E6zG8w/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
+                  </a>
+                </li>
               <li>
                 <Link href="/">
                   <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
@@ -56,7 +60,7 @@ const Footer = () => {
           {/* Right */}
           <div className={styles.linksGrid}>
             <div>
-              <p className={styles.heading}>Treatments</p>
+              <p className={styles.heading}>Wellness Journeys</p>
               <ul>
                 <li><Link href="/" className={styles.headingMax}>Treatment 1</Link></li>
                 <li><Link href="/" className={styles.headingMax}>Treatment 2</Link></li>
@@ -70,8 +74,8 @@ const Footer = () => {
               <ul>
                 <li><Link href="/" className={styles.headingMax}>Home</Link></li>
                 <li><Link href="/about" className={styles.headingMax}>About</Link></li>
-                <li><Link href="/treatment" className={styles.headingMax}>Treatments</Link></li>
                 <li><Link href="/region" className={styles.headingMax}>Destinations</Link></li>
+                <li><Link href="/treatment" className={styles.headingMax}>Wellness Journeys</Link></li>
                 <li><Link href="/contact" className={styles.headingMax}>Contact</Link></li>
               </ul>
             </div>

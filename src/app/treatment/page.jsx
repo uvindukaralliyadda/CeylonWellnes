@@ -1,21 +1,36 @@
+"use client"
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import PageHeader from '@/components/PageHeader/PageHeader'
-import South from '@/components/South/South'
-import Hill from '@/components/Hill/Hill'
-import Cultural from '@/components/Cultural/Cultural'
-import East from '@/components/East/East'
 import Package1 from '@/components/Package1/Package1'
 import Package2 from '@/components/Package2/Package2'
 import Package3 from '@/components/Package3/Package3'
 import Package4 from '@/components/Package4/Package4'
 import Cta from '@/components/Cta/Cta'
-import { Package} from 'lucide-react'
 import Package5 from '@/components/Package5/Package5'
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 
 const Treatments = () => {
+
+   const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const el = document.getElementById(id);
+
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 1000); // delay ensures DOM is ready
+      }
+    }
+  }, [pathname]);
+
+
   return (
     <div>
       <PageHeader
@@ -35,7 +50,7 @@ const Treatments = () => {
 
 
         {/*Region 1*/}
-        <section className={styles.city}>
+        <section className={styles.city} id="restore">
         <div className={styles.city1}>
             <h2 className={styles.city1smallheading}>For Stress Relief & Deep Rest</h2>
             <h1 className={styles.city1title}>Restore & Relax</h1>
@@ -72,7 +87,7 @@ const Treatments = () => {
         </section>
         <hr className={styles.cityline}/>
         {/*Region 2*/}
-        <section className={styles.city}>
+        <section className={styles.city} id="reset">
         <div className={styles.city1}>
             <h2 className={styles.city1smallheading}>For Lifestyle Renewal & Wellness Balance</h2>
             <h1 className={styles.city1title}>Reset & Rebalance</h1>
@@ -111,7 +126,7 @@ const Treatments = () => {
         </section>
         <hr className={styles.cityline}/>
         {/*Region 3*/}
-        <section className={styles.city}>
+        <section className={styles.city} id="reflect">
         <div className={styles.city1}>
             <h2 className={styles.city1smallheading}>For Mindfulness & Inner Clarity</h2>
             <h1 className={styles.city1title}>Reflect & Reconnect</h1>
@@ -152,7 +167,7 @@ const Treatments = () => {
         </section>
         <hr className={styles.cityline}/>
         {/*Region 4*/}
-        <section className={styles.city}>
+        <section className={styles.city} id="recover">
         <div className={styles.city1}>
             <h2 className={styles.city1smallheading}>For Recovery, Rest & Gentle Restoration</h2>
             <h1 className={styles.city1title}>Recover & Renew</h1>
@@ -189,7 +204,7 @@ const Treatments = () => {
         </section>
         <hr className={styles.cityline}/>
         {/*Region 5*/}
-        <section className={styles.city}>
+        <section className={styles.city} id="work">
         <div className={styles.city1}>
             <h2 className={styles.city1smallheading}>For Remote Living & Balanced Productivity</h2>
             <h1 className={styles.city1title}>Work & Wellbeing</h1>

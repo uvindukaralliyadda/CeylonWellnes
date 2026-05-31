@@ -62,10 +62,11 @@ const Footer = () => {
             <div>
               <p className={styles.heading}>Wellness Journeys</p>
               <ul>
-                <li><Link href="/" className={styles.headingMax}>Treatment 1</Link></li>
-                <li><Link href="/" className={styles.headingMax}>Treatment 2</Link></li>
-                <li><Link href="/" className={styles.headingMax}>Treatment 3</Link></li>
-                <li><Link href="/" className={styles.headingMax}>Treatment 4</Link></li>
+                <li><Link href="/treatment#restore" className={styles.headingMax}>Restore & Relax</Link></li>
+                <li><Link href="/treatment#reset" className={styles.headingMax}>Reset & Rebalance</Link></li>
+                <li><Link href="/treatment#reflect" className={styles.headingMax}>Reflect & Reconnect</Link></li>
+                <li><Link href="/treatment#recover" className={styles.headingMax}>Recover & Renew</Link></li>
+                <li><Link href="/treatment#work" className={styles.headingMax}>Work & Wellbeing</Link></li>
               </ul>
             </div>
 

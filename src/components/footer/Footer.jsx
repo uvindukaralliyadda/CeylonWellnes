@@ -86,9 +86,8 @@ const Footer = () => {
         {/* Bottom */}
         <div className={styles.bottom}>
           <ul className={styles.policy}>
-            <li><Link href="/">Terms & Conditions</Link></li>
-            <li><Link href="/">Privacy Policy</Link></li>
-            <li><Link href="/">Cookies</Link></li>
+            <li><Link href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link></li>
+            <li><Link href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</Link></li>
           </ul>
 
           <p>© 2026. Ceylon Wellness Care. All rights reserved.</p>

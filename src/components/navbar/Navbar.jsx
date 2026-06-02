@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className={styles.container}>
 
         {/* LOGO */}
-        <Link href="/" className={styles.logo}>
+        <Link href="/#hero" className={styles.logo}>
           <Image
             src="/logo.png"
             alt="Logo"
@@ -61,7 +61,7 @@ const Navbar = () => {
 
             <li>
               <Link
-                href="/"
+                href="/#hero"
                 className={pathname === "/" ? styles.active : styles.link}
                 onClick={() => setOpen(false)}
               >

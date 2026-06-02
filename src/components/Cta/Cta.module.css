@@ -3,26 +3,16 @@
   width: 100%;
   padding: 120px 20px;
   text-align: center;
+  background-color: #E9E9C7;
 
-  /* background image */
-  background-image: url("/cta.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: #fff;
+  color: #1f1f1f; /* FIX: readable dark text */
   overflow: hidden;
 }
-
 /* DARK GRADIENT OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.85)
-  );
+  background-color: #E9E9C7;
   z-index: 1;
 }
 

@@ -184,56 +184,138 @@ const Contact = () => {
             {/* contact form */}
 
             <div className={styles.contactForm}>
-                  
                   <form className={styles.form}>
-                     {/* Row 1 */}
-                          <div className={styles.row}>
-                            <div className={styles.field}>
-                              <label>NAME*</label>
-                              <input type="text"  />
-                            </div>
 
-                            <div className={styles.field}>
-                              <label>EMAIL*</label>
-                              <input type="email"  />
-                            </div>
-                          </div>
+                      {/* Travel Type */}
+                      <div className={styles.field}>
+                        <label>I PLAN TO TRAVEL *</label>
+                        <select required>
+                          <option value="">Select an option</option>
+                          <option>As a couple</option>
+                          <option>As a family</option>
+                          <option>With my friends</option>
+                          <option>As a group</option>
+                          <option>Corporate Staff</option>
+                          <option>Alone</option>
+                        </select>
+                      </div>
 
-                          {/* Row 2 */}
-                          <div className={styles.row}>
-                            <div className={styles.field}>
-                              <label>PHONE</label>
-                              <input type="tel"  />
-                            </div>
+                      {/* Adults & Children */}
+                      <div className={styles.row}>
+                        <div className={styles.field}>
+                          <label>ADULTS</label>
+                          <input type="number" min="1" />
+                        </div>
 
-                            <div className={styles.field}>
-                              <label>COUNTRY</label>
-                              <input type="text" />
-                            </div>
-                          </div>
+                        <div className={styles.field}>
+                          <label>CHILDREN</label>
+                          <input type="number" min="0" />
+                        </div>
+                      </div>
 
-                          {/* Row 3 full width */}
-                          <div className={styles.field}>
-                            <label>FROM</label>
-                            <input type="date" placeholder='Approximate is enough..' />
-                          </div>
+                      {/* Departure & Duration */}
+                      <div className={styles.row}>
+                        <div className={styles.field}>
+                          <label>TRIP DEPARTURE</label>
+                          <input type="date" />
+                        </div>
 
-                          <div className={styles.field}>
-                            <label>TO</label>
-                            <input type="date" placeholder='Approximate is enough..' />
-                          </div>
+                        <div className={styles.field}>
+                          <label>DURATION (DAYS)</label>
+                          <input type="number" min="1" />
+                        </div>
+                      </div>
 
-                          {/* Row 4 full width */}
-                          <div className={styles.field}>
-                            <label>WHAT KIND OF JOURNEY YOU ARE HOPING FOR?</label>
-                            <textarea  />
-                          </div>
+                      {/* Budget */}
+                      <div className={styles.field}>
+                        <label>MAX BUDGET</label>
+                        <input
+                          type="number"
+                          placeholder="Euros per person"
+                          min="0"
+                        />
+                      </div>
 
-                    <button type="submit" className={styles.button}>
-                      Send Inquiry
-                      <Image src="/submit.webp" alt="Send" width={20} height={20} />
-                    </button>
-                  </form>
+                      {/* Accommodation Level */}
+                      <div className={styles.field}>
+                        <label>DESIRED LEVEL OF ACCOMMODATION</label>
+
+                        <div className={styles.radioGroup}>
+                          <label>
+                            <input type="radio" name="accommodation" value="Guest House" />
+                            Guest House
+                          </label>
+
+                          <label>
+                            <input type="radio" name="accommodation" value="Standard (***)" />
+                            Standard (***)
+                          </label>
+
+                          <label>
+                            <input type="radio" name="accommodation" value="Comfort (****)" />
+                            Comfort (****)
+                          </label>
+
+                          <label>
+                            <input
+                              type="radio"
+                              name="accommodation"
+                              value="Luxury / Boutique Hotel (*****)"
+                            />
+                            Luxury / Boutique Hotel (*****)
+                          </label>
+                        </div>
+                      </div>
+
+                      {/* Additional Requests */}
+                      <div className={styles.field}>
+                        <label>ADDITIONAL ACCOMMODATION AND OTHER REQUESTS</label>
+                        <textarea />
+                      </div>
+
+                      {/* Name & Phone */}
+                      <div className={styles.row}>
+                        <div className={styles.field}>
+                          <label>FULL NAME *</label>
+                          <input type="text" required />
+                        </div>
+
+                        <div className={styles.field}>
+                          <label>PHONE / WHATSAPP *</label>
+                          <input type="tel" required />
+                        </div>
+                      </div>
+
+                      {/* Email & City */}
+                      <div className={styles.row}>
+                        <div className={styles.field}>
+                          <label>EMAIL</label>
+                          <input type="email" />
+                        </div>
+
+                        <div className={styles.field}>
+                          <label>CITY *</label>
+                          <input type="text" required />
+                        </div>
+                      </div>
+
+                      {/* Country */}
+                      <div className={styles.field}>
+                        <label>COUNTRY OF RESIDENCE</label>
+                        <input type="text" />
+                      </div>
+
+                      <button type="submit" className={styles.button}>
+                        Send Inquiry
+                        <Image
+                          src="/submit.webp"
+                          alt="Send"
+                          width={20}
+                          height={20}
+                        />
+                      </button>
+
+                    </form>
                 </div>
                 
         </div>  

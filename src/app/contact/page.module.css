@@ -347,6 +347,27 @@ transform: scale(1.05);
   transform: scale(1.05);
 }
 
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #30673A;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.radioGroup input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
 
   /* 전체 section becomes vertical */

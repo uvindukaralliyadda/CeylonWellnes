@@ -8,10 +8,10 @@ import styles from "./hero.module.css";
 
 
 const slides = [
-  { src: "/Group 1.png", place: "VIP Clients · Busy Families", label: "Fully planned wellness journeys" },
+  { src: "/Group 5.png", place: "VIP Clients · Busy Families", label: "Fully planned wellness journeys" },
   { src: "/Group 2.png", place: "Recovery Patients", label: "Detoxification & post-treatment recovery support" },
   { src: "/Group 3.png", place: "Families · Local & Foreign Travelers", label: "Holistic wellness experiences" },
-  { src: "/Group 4.png", place: "Digital Nomads · Corporate Staff", label: "Work-life balance wellness programs" },
+  { src: "/Group 6.png", place: "Digital Nomads · Corporate Staff", label: "Work-life balance wellness programs" },
 ];
 
 export default function Hero() {

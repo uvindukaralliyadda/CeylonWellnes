@@ -146,3 +146,67 @@
 .fillActive {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .textBox {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  /* BUTTON ROW (same line) */
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers text horizontally */
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 22px;
+    white-space: nowrap; /* prevents wrapping */
+  }
+
+  .primaryBtn:hover,
+  .secondaryBtn:hover {
+    transform: none;
+  }
+
+  /* INDICATORS */
+  .indicators {
+    margin-top: 18px;
+    justify-content: center;
+  }
+
+  .bar {
+    width: 22px;
+  }
+}

@@ -150,7 +150,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 15px 16px 3px 16px;
+    padding: 15px 16px 0 16px;
     height: 100%;
   }
 
@@ -189,7 +189,7 @@
     font-size: 13px;
     line-height: 1.5;
     opacity: 0.85;
-    margin: 310px 0 8px 0;
+    margin: 350px 0 8px 0;
   }
 
   .buttons {

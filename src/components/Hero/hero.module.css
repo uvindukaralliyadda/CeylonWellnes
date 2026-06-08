@@ -149,7 +149,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding: 0 16px 15px 16px;
   }
 
   .textBox {
@@ -159,12 +159,13 @@
 
   .eyebrow {
     font-size: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
   }
 
   .title {
     font-size: 26px;
     line-height: 1.25;
+    margin-bottom: 15px;
   }
 
   .subtitle {
@@ -172,6 +173,7 @@
     margin-top: 10px;
     line-height: 1.5;
     opacity: 0.85;
+    margin-bottom: 15px;
   }
 
   /* BUTTON ROW (same line) */

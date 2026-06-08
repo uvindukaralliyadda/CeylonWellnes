@@ -5,18 +5,38 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./hero.module.css";
 
-
-
 const slides = [
-  { src: "/Group 5.png", place: "VIP Clients · Busy Families", label: "Fully planned wellness journeys" },
-  { src: "/Group 2.png", place: "Recovery Patients", label: "Detoxification & post-treatment recovery support" },
-  { src: "/Group 3.png", place: "Families · Local & Foreign Travelers", label: "Holistic wellness experiences" },
-  { src: "/Group 6.png", place: "Digital Nomads · Corporate Staff", label: "Work-life balance wellness programs" },
+  {
+    src: "/Group 5.png",
+    mobileSrc: "/Mobile 1.jpg",
+    place: "VIP Clients · Busy Families",
+    label: "Fully planned wellness journeys",
+  },
+  {
+    src: "/Group 2.png",
+    mobileSrc: "/Mobile 2.jpg",
+    place: "Recovery Patients",
+    label: "Detoxification & post-treatment recovery support",
+  },
+  {
+    src: "/Group 3.png",
+    mobileSrc: "/Mobile 3.jpg",
+    place: "Families · Local & Foreign Travelers",
+    label: "Holistic wellness experiences",
+  },
+  {
+    src: "/Group 6.png",
+    mobileSrc: "/Mobile 4.jpg",
+    place: "Digital Nomads · Corporate Staff",
+    label: "Work-life balance wellness programs",
+  },
 ];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Auto-slide
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -25,9 +45,20 @@ export default function Hero() {
     return () => clearInterval(id);
   }, []);
 
+  // Detect screen size
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <section className={styles.hero}>
-      
       {/* SLIDES */}
       {slides.map((slide, i) => (
         <div
@@ -37,7 +68,7 @@ export default function Hero() {
           }`}
         >
           <Image
-            src={slide.src}
+            src={isMobile ? slide.mobileSrc : slide.src}
             alt={slide.place}
             fill
             priority={i === 0}
@@ -53,7 +84,6 @@ export default function Hero() {
       {/* CONTENT */}
       <div className={styles.content}>
         <div className={styles.container}>
-          
           <div className={styles.textBox}>
             <p className={styles.eyebrow}>
               {slides[index].label} · {slides[index].place}
@@ -62,12 +92,15 @@ export default function Hero() {
             <h1 className={styles.title}>
               Wellness Travel in Sri Lanka,
               <br />
-              <span><i>Designed Around You.</i></span>
+              <span>
+                <i>Designed Around You.</i>
+              </span>
             </h1>
 
             <p className={styles.subtitle}>
-              We create fully personalized wellness journeys that go beyond sightseeing, helping you restore balance, heal, 
-              and experience Sri Lanka through mindful travel, curated by local experts.
+              We create fully personalized wellness journeys that go beyond
+              sightseeing, helping you restore balance, heal, and experience
+              Sri Lanka through mindful travel, curated by local experts.
             </p>
 
             <div className={styles.buttons}>
@@ -88,6 +121,7 @@ export default function Hero() {
                 key={i}
                 onClick={() => setIndex(i)}
                 className={styles.bar}
+                aria-label={`Go to slide ${i + 1}`}
               >
                 <span
                   className={`${styles.fill} ${
@@ -97,7 +131,6 @@ export default function Hero() {
               </button>
             ))}
           </div>
-
         </div>
       </div>
     </section>

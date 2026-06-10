@@ -7,28 +7,28 @@ import styles from "./hero.module.css";
 
 const slides = [
   {
-    src: "/Group 5.png",
-    mobileSrc: "/Mobile 1.jpg",
-    place: "VIP Clients · Busy Families",
-    label: "Fully planned wellness journeys",
+    src: "/Group 5.webp",
+    mobileSrc: "/Mobile 5.webp",
+    place: "Digital Nomads · Corporate Staff",
+    label: "Work-life balance wellness programs",
   },
   {
-    src: "/Group 2.png",
-    mobileSrc: "/Mobile 2.jpg",
+    src: "/Group 2.webp",
+    mobileSrc: "/Mobile 2.webp",
     place: "Recovery Patients",
     label: "Detoxification & post-treatment recovery support",
   },
   {
-    src: "/Group 3.png",
-    mobileSrc: "/Mobile 3.jpg",
+    src: "/Group 3.webp",
+    mobileSrc: "/Mobile 3.webp",
     place: "Families · Local & Foreign Travelers",
     label: "Holistic wellness experiences",
   },
   {
-    src: "/Group 6.png",
-    mobileSrc: "/Mobile 4.jpg",
-    place: "Digital Nomads · Corporate Staff",
-    label: "Work-life balance wellness programs",
+    src: "/Group 6.webp",
+    mobileSrc: "/Mobile 6.webp",
+    place: "Alone Travelers · Friend Groups",
+    label: "Wellness travel for work-life balance",
   },
 ];
 

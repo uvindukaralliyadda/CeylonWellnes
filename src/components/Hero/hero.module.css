@@ -226,4 +226,10 @@
   .bar {
     width: 22px;
   }
+
+ 
+  .image {
+      transform: translateX(-1px);
+  }
+
 }

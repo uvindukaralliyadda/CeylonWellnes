@@ -11,24 +11,28 @@ const slides = [
     mobileSrc: "/Mobile 5.webp",
     place: "Digital Nomads · Corporate Staff",
     label: "Work-life balance wellness programs",
+    mobileObjectPosition: "40% 50%",
   },
   {
     src: "/Group 2.webp",
     mobileSrc: "/Mobile 2.webp",
     place: "Recovery Patients",
     label: "Detoxification & post-treatment recovery support",
+    mobileObjectPosition: "70% 50%",
   },
   {
     src: "/Group 3.webp",
     mobileSrc: "/Mobile 3.webp",
     place: "Families · Local & Foreign Travelers",
     label: "Holistic wellness experiences",
+    mobileObjectPosition: "60% 50%",
   },
   {
     src: "/Group 6.webp",
     mobileSrc: "/Mobile 6.webp",
     place: "Alone Travelers · Friend Groups",
     label: "Wellness travel for work-life balance",
+    mobileObjectPosition: "45% 50%",
   },
 ];
 
@@ -63,9 +67,8 @@ export default function Hero() {
       {slides.map((slide, i) => (
         <div
           key={i}
-          className={`${styles.slide} ${
-            i === index ? styles.active : ""
-          }`}
+          className={`${styles.slide} ${i === index ? styles.active : ""
+            }`}
         >
           <Image
             src={isMobile ? slide.mobileSrc : slide.src}
@@ -74,7 +77,10 @@ export default function Hero() {
             priority={i === 0}
             sizes="100vw"
             className={styles.image}
-            style={{ objectFit: "cover" }}
+            style={{
+              objectFit: "cover",
+              objectPosition: isMobile ? (slide.mobileObjectPosition || "center") : "center",
+            }}
           />
 
           <div className={styles.overlay} />
@@ -124,9 +130,8 @@ export default function Hero() {
                 aria-label={`Go to slide ${i + 1}`}
               >
                 <span
-                  className={`${styles.fill} ${
-                    i === index ? styles.fillActive : ""
-                  }`}
+                  className={`${styles.fill} ${i === index ? styles.fillActive : ""
+                    }`}
                 />
               </button>
             ))}
